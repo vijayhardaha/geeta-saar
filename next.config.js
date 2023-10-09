@@ -12,6 +12,8 @@ const nextConfig = {
 
   // Enable SWC-based minification for improved build performance.
   swcMinify: true,
+
+  output: 'export',
 };
 
 // Enhance the Next.js configuration with 'next-contentlayer' and PWA.
