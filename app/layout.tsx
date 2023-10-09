@@ -43,12 +43,12 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <main className="container mx-auto max-w-5xl py-6 px-6 flex-grow">
               {children}
             </main>
-            <footer className="container mx-auto max-w-5xl py-3 px-6 flex-grow border-t">
+            <footer className="py-3 px-6 flex-grow border-t">
               <div className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-1">
                 {/* Render footer links */}
                 <Link

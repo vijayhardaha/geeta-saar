@@ -32,7 +32,7 @@ const PostHeader: React.FC<PostHeaderProps> = ({ post }) => {
         <div className="block">
           <Prose>
             {/* Create a link back to the home page using Next.js Link */}
-            <NextLink href="/" className="text-primary text-small">
+            <NextLink href="/" className="text-primary text-small no-underline">
               &larr; Back to Home
             </NextLink>
           </Prose>
