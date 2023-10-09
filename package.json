@@ -6,7 +6,8 @@
   "dev": "next dev",
   "build": "next build",
   "start": "next start",
-  "lint": "next lint"
+  "lint": "next lint",
+  "postinstall": "husky install"
  },
  "dependencies": {
   "@nextui-org/button": "2.0.21",
@@ -46,6 +47,7 @@
   "@types/react-dom": "18.2.11",
   "eslint": "8.51.0",
   "eslint-config-next": "13.5.4",
-  "typescript": "5.2.2"
+  "typescript": "5.2.2",
+  "husky": "^8.0.0"
  }
 }
