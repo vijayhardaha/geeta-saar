@@ -13,6 +13,8 @@ import { PostMeta } from "@/components/Post/PostComponents";
 // Import the 'cx' utility function from the specified path
 import { cx } from "@/lib/utils";
 
+import { BsArrowLeft } from "react-icons/bs";
+
 // Define the type of props that the PostHeader component expects
 type PostHeaderProps = {
   post: Post;
@@ -53,7 +55,8 @@ const PostHeader: React.FC<PostHeaderProps> = ({ post }) => {
             "py-2 px-4 mb-2 rounded-lg"
           )}
         >
-          &larr; Go to Home
+          <BsArrowLeft size={16} className="inline mr-1" />
+          Go to Home
         </NextLink>
       </div>
     </header>

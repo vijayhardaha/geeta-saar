@@ -3,6 +3,7 @@ import React from "react";
 import NextLink from "next/link";
 import { cx } from "@/lib/utils"; // Assuming you have a 'cx' utility function
 import { Post } from "@/.contentlayer/generated";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 // Define the type of props that the PagePagination component expects
 type PagePaginationProps = {
@@ -46,9 +47,17 @@ const renderNavigationItem = ({ post, direction }: NavigationItemProps) => {
           className="font-bold text-gray-700 hover:text-primary"
         >
           {/* Render the post title with an arrow based on the direction */}
-          {direction === "next"
-            ? `${post.title}${"\u00A0"}→`
-            : `←${"\u00A0"}${post.title}`}
+          {direction === "next" ? (
+            <>
+              {post.title}
+              <BsArrowRight size={16} className="inline ml-1"/>
+            </>
+          ) : (
+            <>
+              <BsArrowLeft size={16} className="inline mr-1"/>
+              {post.title}
+            </>
+          )}
         </NextLink>
       </div>
     </div>
