@@ -5,7 +5,7 @@ const Prose: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
-    <div className="max-w-none prose prose-a:text-primary-600 dark:prose-invert">
+    <div className="max-w-none prose prose-a:text-primary-600 prose-headings:text-primary dark:prose-invert">
       {children}
     </div>
   );

@@ -3,9 +3,9 @@
 // Define the NoContentFound component
 export default function NoContentFound() {
   return (
-    <div className="flex flex-col gap-3 max-w-lg md:max-w-xl">
+    <div className="flex flex-col gap-3 w-full">
       {/* Render a heading */}
-      <h2 className="text-3xl font-normal md:text-4xl">
+      <h2 className="text-3xl font-bold text-red-400 md:text-4xl">
         Sorry, no posts were found...
       </h2>
 

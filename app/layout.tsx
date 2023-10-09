@@ -45,11 +45,11 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-5xl py-6 px-6 flex-grow">
+            <main className="container mx-auto max-w-5xl py-4 px-4 flex-grow">
               {children}
             </main>
-            <footer className="py-3 px-6 flex-grow border-t">
-              <div className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-1">
+            <footer className="container mx-auto max-w-5xl flex-grow px-4">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-1 py-4 border-t">
                 {/* Render footer links */}
                 <Link
                   isExternal

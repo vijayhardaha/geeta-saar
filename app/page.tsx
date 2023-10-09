@@ -2,7 +2,7 @@
 import { siteConfig } from "@/config/site"; // Import site configuration
 import { title, subtitle } from "@/lib/primitives"; // Import text styling functions
 
-import { PostCardGrid, PostSearch } from "@/components/Post/"; // Import PostCardGrid, PostSearch component
+import { PostCardGrid } from "@/components/Post/"; // Import PostCardGrid component
 
 // Define the Home component
 export default function Home() {
@@ -16,9 +16,6 @@ export default function Home() {
         {/* Render the site description */}
         <p className={subtitle({ class: "mt-4" })}>{siteConfig.description}</p>
       </div>
-
-      {/* Render the PostSearch component */}
-      <PostSearch />
 
       {/* Render the PostCardGrid component */}
       <PostCardGrid />
