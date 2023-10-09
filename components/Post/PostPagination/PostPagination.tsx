@@ -21,6 +21,7 @@ const PostPagination: React.FC<PostPaginationProps> = ({
       <Pagination
         disableCursorAnimation
         showControls
+        size="lg"
         initialPage={1}
         total={totalPages}
         page={currentPage}

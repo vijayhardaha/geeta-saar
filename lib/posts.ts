@@ -8,4 +8,4 @@ export const getAllPosts: Post[] = allPosts.sort((a: Post, b: Post) =>
 );
 
 // Define the number of posts to display per page
-export const postsPerPage: number = 2;
+export const postsPerPage: number = 15;

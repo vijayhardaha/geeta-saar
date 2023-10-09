@@ -1,7 +1,7 @@
 // Import fonts from the "next/font/google" package.
 import {
-  Courier_Prime as FontMono,
   Poppins as FontSans,
+  Courier_Prime as FontMono,
 } from "next/font/google";
 
 // Define and export the Font Sans configuration.

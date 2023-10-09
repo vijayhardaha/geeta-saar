@@ -14,8 +14,8 @@ export default function PostCard({ post }: IProps): JSX.Element {
   const { title, date, url, description, ttr, tags } = post;
 
   return (
-    <article className="contents">
-      <div className="flex flex-col border-b-2 gap-y-2 py-5 mb-2">
+    <article className="block border-b-1 last:border-b-0">
+      <div className="flex flex-col gap-y-2 py-4">
         {/* Create a link to the post using Next.js Link */}
         <Link
           href={url}
@@ -34,7 +34,7 @@ export default function PostCard({ post }: IProps): JSX.Element {
           <div className="flex flex-col gap-2">
             {/* Render the post description */}
             <Prose>
-              <p>{description}</p>
+              <p className="text-default-900">{description}</p>
             </Prose>
           </div>
         </Link>

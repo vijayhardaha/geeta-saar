@@ -24,27 +24,33 @@ const renderNavigationItem = ({ post, direction }: NavigationItemProps) => {
   // Check if the post is not provided or is null, and return null if so
   if (!post) return null;
 
+  const isNext = direction === "next";
+
   return (
     // Render a div with appropriate styling based on the navigation direction
-    <div className={cx(direction === "next" ? "col-start-2 text-right" : "")}>
-      {/* Render a text indicating "Next" or "Previous" based on the direction */}
-      <p
-        className={cx(
-          "mb-1 tracking-wider text-sm",
-          "text-gray-500",
-          "dark:text-gray-400"
-        )}
-      >
-        {direction === "next" ? "Next" : "Previous"}
-      </p>
-      {/* Render a NextLink component with a link to the post and styling */}
-      <NextLink
-        href={post.url}
-        className="font-bold text-gray-700 hover:text-primary"
-      >
-        {/* Render the post title with an arrow based on the direction */}
-        {direction === "next" ? `${post.title} →` : `← ${post.title}`}
-      </NextLink>
+    <div className={cx(isNext ? "col-start-2 text-right" : "")}>
+      <div className={cx("max-w-[18rem]", isNext ? "ml-auto" : "")}>
+        {/* Render a text indicating "Next" or "Previous" based on the direction */}
+        <p
+          className={cx(
+            "mb-1 tracking-wider text-sm",
+            "text-gray-500",
+            "dark:text-gray-400"
+          )}
+        >
+          {direction === "next" ? "Next" : "Previous"}
+        </p>
+        {/* Render a NextLink component with a link to the post and styling */}
+        <NextLink
+          href={post.url}
+          className="font-bold text-gray-700 hover:text-primary"
+        >
+          {/* Render the post title with an arrow based on the direction */}
+          {direction === "next"
+            ? `${post.title}${"\u00A0"}→`
+            : `←${"\u00A0"}${post.title}`}
+        </NextLink>
+      </div>
     </div>
   );
 };
