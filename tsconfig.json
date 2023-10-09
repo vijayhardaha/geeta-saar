@@ -1,0 +1,72 @@
+{
+  "compilerOptions": {
+    // Set the base URL for module resolution.
+    "baseUrl": "./",
+
+    // Target JavaScript version to compile to.
+    "target": "es5",
+
+    // List of libraries to include when type-checking.
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    // Allow JavaScript files to be compiled.
+    "allowJs": true,
+
+    // Skip type checking of declaration files.
+    "skipLibCheck": true,
+
+    // Enable strict type-checking.
+    "strict": true,
+
+    // Enforce consistent casing in file names.
+    "forceConsistentCasingInFileNames": true,
+
+    // Do not emit output files, useful for type checking only.
+    "noEmit": true,
+
+    // Enable interoperation between CommonJS and ES modules.
+    "esModuleInterop": true,
+
+    // Specify the module system.
+    "module": "esnext",
+
+    // Specify the module resolution strategy.
+    "moduleResolution": "node",
+
+    // Allow importing JSON files as modules.
+    "resolveJsonModule": true,
+
+    // Ensure isolated modules for better type checking.
+    "isolatedModules": true,
+
+    // Preserve JSX syntax for transpilation.
+    "jsx": "preserve",
+
+    // Enable incremental compilation for better build performance.
+    "incremental": true,
+
+    // Specify additional plugins (e.g., for Next.js).
+    "plugins": [{ "name": "next" }],
+
+    // Define path aliases for module resolution.
+    "paths": {
+      // Map "@/*" imports to the current directory.
+      "@/*": ["./*"],
+
+      // Map "contentlayer/generated" imports to "./.contentlayer/generated".
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
+  },
+
+  // Include TypeScript files and TypeScript React files for compilation.
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
+  ],
+
+  // Exclude the "node_modules" directory from compilation.
+  "exclude": ["node_modules"]
+}

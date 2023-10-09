@@ -1,0 +1,22 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# This is the top-most EditorConfig file.
+# It ensures consistent code formatting for the entire project.
+
+# Set 'root' to 'true' to indicate that this is the root .editorconfig file.
+root = true
+
+# Default configuration for all files.
+[*]
+# Use spaces for indentation.
+indent_style = space
+# Use 2 spaces for each level of indentation.
+indent_size = 2
+# Use LF (line feed) as the line ending.
+end_of_line = lf
+# Use UTF-8 character encoding.
+charset = utf-8
+# Do not trim trailing whitespace.
+trim_trailing_whitespace = false
+# Do not insert a final newline at the end of files.
+insert_final_newline = false
